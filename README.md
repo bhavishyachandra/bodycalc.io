@@ -2,14 +2,14 @@
 
 ## Resources
 - API Gateway End points:
-  - bodycalc.io
-  - d29xo46q0sqnzl.cloudfront.net
+  - https://bodycalc.io
+  - https://d29xo46q0sqnzl.cloudfront.net
   - https://co29zf6w3f.execute-api.us-west-2.amazonaws.com/dev
 - IAM user: bodycalc.io
 - S3: https://s3-us-west-2.amazonaws.com/bodycalc.io/static/
 - Cloudfront:
-  - cdn.bodycalc.io
-  - d2aeb81h32shl0.cloudfront.net
+  - https://cdn.bodycalc.io
+  - https://d2aeb81h32shl0.cloudfront.net
 
 ### Django Build
 - To do: https://bower.io/blog/2017/how-to-migrate-away-from-bower/
