@@ -1,0 +1,32 @@
+{% load static from staticfiles %}
+{% load pipeline %}
+
+<!DOCTYPE html>
+<html lang='en_us'>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>{% block title %}{% endblock %}</title>
+
+      {% stylesheet 'pollsX' %}
+      {% if debug %}
+        <!-- add stuff that only links when in Debug mode -->
+      {% else %}
+      {% endif %}
+      {% block head %}{% endblock %}
+    </head>
+    <body onload="hello();">
+      <div class="container">
+        {% block body %}
+        {% endblock %}
+      </div>
+
+      <!-- Pipeline bundled js -->
+      {% javascript 'pollsX' %}
+      {% if debug %}
+        <!-- add stuff that only links when in Debug mode -->
+      {% else %}
+      {% endif %}
+    </body>
+</html>

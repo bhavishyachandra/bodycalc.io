@@ -1,0 +1,25 @@
+{
+  "name": "bodycalc.io",
+  "version": "1.0.0",
+  "description": "Body Fat Calculator",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bodycalc/bodycalc.io.git"
+  },
+  "author": "Lawrence McDaniel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bodycalc/bodycalc.io/issues"
+  },
+  "homepage": "https://github.com/bodycalc/bodycalc.io#readme",
+  "dependencies": {
+    "bower": "^1.8.4",
+    "cssmin": "^0.4.3",
+    "uglify-js": "^1.3.5",
+    "yuglify": "^2.0.0"
+  }
+}

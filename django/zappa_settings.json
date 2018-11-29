@@ -1,0 +1,9 @@
+{
+    "dev": {
+        "django_settings": "app.settings",
+        "profile_name": "bodycalc.io",
+        "project_name": "app",
+        "runtime": "python3.6",
+        "s3_bucket": "bodycalc.io"
+    }
+}
