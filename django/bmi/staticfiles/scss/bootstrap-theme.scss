@@ -1,0 +1,7 @@
+// Your variable overrides
+$body-bg: #000;
+$body-color: #111;
+$btn-primary-color: orange;
+
+// Bootstrap and its default variables
+@import "../../../../components/bower_components/bootstrap/scss/bootstrap";

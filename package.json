@@ -19,6 +19,7 @@
   "dependencies": {
     "bower": "^1.8.4",
     "cssmin": "^0.4.3",
+    "sass": "^1.15.1",
     "uglify-js": ">=2.6.0",
     "yuglify": "^2.0.0"
   }
