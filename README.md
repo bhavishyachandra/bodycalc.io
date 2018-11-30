@@ -36,7 +36,9 @@ python app/manage.py collectstatic
 aws s3 sync static/ s3://bodycalc.io/static/
 
 ### Zappa AWS deployment manager
-Note that Zappa relies an IAM user which is specified in django.zappa_settings.json. I placed a copy of the IAM policy in json format in aws-iam-policy.json.
+- Note that Zappa relies an IAM user which is specified in django.zappa_settings.json. I placed a copy of the IAM policy in json format in aws-iam-policy.json.
+- Also note that i had to manually add the VPC settings to zappa_settings.json. I never figured out the individual policy permissions for this and so ended up temporarily adding admin rights to the project's IAM user.
+- Finally, for security reasons your RDS MySQL database should ideally use IAM access rather than traditionall username / pwd.
 
 ```
 zappa init         # see notes below on installation details
@@ -53,8 +55,8 @@ zappa -h
 * Django Environment: https://github.com/joke2k/django-environ
 * Using Amazon S3 to Store your Django Site's Static and Media Files: https://www.caktusgroup.com/blog/2014/11/10/Using-Amazon-S3-to-store-your-Django-sites-static-and-media-files/
 * Static files - Django Official Documentation: https://docs.djangoproject.com/en/2.1/howto/static-files/
-* Zappa setup: https://blog.apcelent.com/deploy-flask-aws-lambda.html
 * Django - Zappa Guide: https://edgarroman.github.io/zappa-django-guide/
+* Zappa setup: https://blog.apcelent.com/deploy-flask-aws-lambda.html (this is not as useful)
 * Django static asset w Zappa: https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 
