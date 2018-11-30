@@ -189,18 +189,21 @@ BOWER_INSTALLED_APPS = (
 #    },
 #
 #    'PIPELINE_ENABLED': True,
+#    'CSS_COMPRESSOR': 'pipeline.compressors.yuglify.YuglifyCompressor',
+#    'JS_COMPRESSOR': 'pipeline.compressors.jsmin.JSMinCompressor',
+#
+#    'COMPILERS' : (
+#      'pipeline.compilers.sass.SASSCompiler',
+#     ),
+#    'SASS_ARGUMENTS' : 'scss/bootstrap-theme.scss css/bootstrap-theme.css',
+#
 #======================= Pipeline Setup ================================
 PIPELINE = {
-    'CSS_COMPRESSOR': 'pipeline.compressors.yuglify.YuglifyCompressor',
-    'JS_COMPRESSOR': 'pipeline.compressors.jsmin.JSMinCompressor',
-    'COMPILERS' : (
-      'pipeline.compilers.sass.SASSCompiler',
-     ),
-     'SASS_ARGUMENTS' : 'scss/bootstrap-theme.scss css/bootstrap-theme.css',
+    'CSS_COMPRESSOR': None,
+    'JS_COMPRESSOR': None,
     'STYLESHEETS': {
         'pollsX': {
             'source_filenames': (
-#              'bootstrap/dist/css/bootstrap.css',
               'css/bmi.css',
               'css/bootstrap-theme.css'
             ),

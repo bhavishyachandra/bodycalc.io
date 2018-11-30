@@ -8,6 +8,8 @@ components
 npm_modules
 node_modules
 package-lock.json
+django/bmi/staticfiles/css/bootstrap-theme.css
+django/bmi/staticfiles/css/bootstrap-theme.css.map
 
 # OS generated files #
 ######################
