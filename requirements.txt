@@ -2,7 +2,6 @@ django
 mysqlclient
 zappa
 django-environ
-django-bower
 django-npm
 django-pipeline
 jsmin
