@@ -52,8 +52,7 @@ ALLOWED_HOSTS = [
 
 INSTALLED_APPS = [
     'pipeline',
-    'djangobower',
-    'bmi.apps.BmiConfig',
+    'dashboard.apps.DashboardConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -156,12 +155,12 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
 # tell django the full path to the location of all static assets
 STATICFILES_DIRS = [
-     os.path.join(BASE_DIR, 'bmi', 'staticfiles'),
+     os.path.join(BASE_DIR, 'dashboard', 'staticfiles'),
 ]
 
 #tell django where to look when running collectstatic - via custom classes
 STATICFILES_FINDERS = (
-    'djangobower.finders.BowerFinder',
+#    'djangobower.finders.BowerFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'pipeline.finders.PipelineFinder',
@@ -169,18 +168,6 @@ STATICFILES_FINDERS = (
 #Reference: https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#django.contrib.staticfiles.storage.ManifestStaticFilesStorage
 #STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
 STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
-
-#======================= Bower Setup ================================
-# Reference: https://django-bower.readthedocs.io/en/latest/installation.html
-#======================= Bower Setup ================================
-BOWER_COMPONENTS_ROOT = os.path.join(PROJECT_ROOT, 'components')
-BOWER_INSTALLED_APPS = (
-    'jquery',
-    'popper.js',
-    'bootstrap',
-    'underscore',
-    'd3',
-)
 
 #======================= Pipeline Setup ================================
 # Reference: https://django-pipeline.readthedocs.io/en/latest/
@@ -202,10 +189,32 @@ PIPELINE = {
     'CSS_COMPRESSOR': None,
     'JS_COMPRESSOR': None,
     'STYLESHEETS': {
-        'pollsX': {
+        'dashboardCSS': {
             'source_filenames': (
-              'css/bmi.css',
-              'css/bootstrap-theme.css'
+              '*.css',
+              'app/*.css',
+              'app/bundle/*.css',
+              'app/custom/*.css',
+
+              'custom/*.css',
+              'custom/blog/*.css',
+              'custom/error/*.css',
+              'custom/invoice/*.css',
+              'custom/pricing/*.css',
+              'custom/user/*.css',
+
+              'demo/*.css',
+              'demo/base/*.css',
+              'demo/skins/header/*.css',
+
+              'media/*.css',
+              'vendors/base/*.css',
+
+              'vendors/custom/datatables/*.css',
+              'vendors/custom/flot/*.css',
+              'vendors/custom/fullcalendar/*.css',
+              'vendors/custom/gmaps/*.css',
+              'vendors/custom/jquery-ui/*.css',
             ),
             'output_filename': 'styles.css',
             'extra_context': {
@@ -214,12 +223,32 @@ PIPELINE = {
         },
     },
     'JAVASCRIPT': {
-        'pollsX': {
+        'dashboardJS': {
             'source_filenames': (
-              'jquery/dist/jquery.js',
-              'popper.js/dist/popper.js',
-              'bootstrap/dist/js/bootstrap.js',
-              'js/bmi.js'
+              '*.js',
+              'app/*.js',
+              'app/bundle/*.js',
+              'app/custom/*.js',
+
+              'custom/*.js',
+              'custom/blog/*.js',
+              'custom/error/*.js',
+              'custom/invoice/*.js',
+              'custom/pricing/*.js',
+              'custom/user/*.js',
+
+              'demo/*.js',
+              'demo/base/*.js',
+              'demo/skins/header/*.js',
+
+              'media/*.js',
+              'vendors/base/*.js',
+
+              'vendors/custom/datatables/*.js',
+              'vendors/custom/flot/*.js',
+              'vendors/custom/fullcalendar/*.js',
+              'vendors/custom/gmaps/*.js',
+              'vendors/custom/jquery-ui/*.js',
             ),
             'output_filename': 'bundle.js',
         }
