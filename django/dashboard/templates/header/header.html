@@ -1,0 +1,42 @@
+{% load static %}
+<!-- {% load pipeline %} -->
+
+<!-- begin:: Topbar Offcanvas Panels -->
+
+  {% include 'toolbar/offcanvas-toolbar-search.html' %}
+  {% include 'toolbar/offcanvas-toolbar-notifications.html' %}
+  {% include 'toolbar/offcanvas-toolbar-quickactions.html' %}
+  {% include 'toolbar/offcanvas-toolbar-profile.html' %}
+  {% include 'toolbar/offcanvas-toolbar-quickpanel.html' %}
+
+<!-- end:: Topbar Offcanvas Panels -->
+<!-- begin:: Header Mobile -->
+<div id='k_header_mobile' class='k-header-mobile  k-header-mobile--fixed '>
+  <div class='k-header-mobile__logo'>
+    <a href='index.html'>
+      <img alt='Logo' src='{% static 'media/logos/logo-1.png' %}' />
+    </a>
+  </div>
+  <div class='k-header-mobile__toolbar'>
+    <button class='k-header-mobile__toolbar-toggler' id='k_header_mobile_toggler'><span></span></button>
+    <button class='k-header-mobile__toolbar-topbar-toggler' id='k_header_mobile_topbar_toggler'><i class='flaticon-more'></i></button>
+  </div>
+</div>
+
+<!-- end:: Header Mobile -->
+<!-- begin:: Header -->
+<div id='k_header' class='k-header k-grid__item k-grid k-grid--ver  k-header--fixed '>
+
+  <!-- begin:: Brand -->
+  <div class='k-header__brand   k-grid__item' id='k_header_brand'>
+    <a href='index.html'>
+      <img alt='Logo' src='{% static 'images/weight-scale.png' %}' height="50px" />
+    </a>
+  </div>
+
+  <!-- end:: Brand -->
+{% include 'header/topbar.html' %}
+{% comment 'Future use' %}
+  {% include 'header/menu.html' %}
+  {% include 'header/subheader.html' %}
+{% endcomment %}

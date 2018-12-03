@@ -1,0 +1,125 @@
+{% load static %}
+
+<!--begin::Portlet-->
+<div class="k-portlet k-portlet--height-fluid">
+  <div class="k-portlet__head">
+    <div class="k-portlet__head-label">
+      <h3 class="k-portlet__head-title">Body Mass Index</h3>
+    </div>
+    <div class="k-portlet__head-toolbar">
+      <div class="k-portlet__head-toolbar-wrapper">
+        <div class="dropdown dropdown-inline">
+          <button type="button" class="btn btn-clean btn-sm btn-icon btn-icon-md" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="flaticon-more-1"></i>
+          </button>
+          <div class="dropdown-menu dropdown-menu-right">
+            <ul class="k-nav">
+              <li class="k-nav__section k-nav__section--first">
+                <span class="k-nav__section-text">Export Tools</span>
+              </li>
+              <li class="k-nav__item">
+                <a href="#" class="k-nav__link">
+                  <i class="k-nav__link-icon la la-print"></i>
+                  <span class="k-nav__link-text">Print</span>
+                </a>
+              </li>
+              <li class="k-nav__item">
+                <a href="#" class="k-nav__link">
+                  <i class="k-nav__link-icon la la-copy"></i>
+                  <span class="k-nav__link-text">Copy</span>
+                </a>
+              </li>
+              <li class="k-nav__item">
+                <a href="#" class="k-nav__link">
+                  <i class="k-nav__link-icon la la-file-excel-o"></i>
+                  <span class="k-nav__link-text">Excel</span>
+                </a>
+              </li>
+              <li class="k-nav__item">
+                <a href="#" class="k-nav__link">
+                  <i class="k-nav__link-icon la la-file-text-o"></i>
+                  <span class="k-nav__link-text">CSV</span>
+                </a>
+              </li>
+              <li class="k-nav__item">
+                <a href="#" class="k-nav__link">
+                  <i class="k-nav__link-icon la la-file-pdf-o"></i>
+                  <span class="k-nav__link-text">PDF</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="k-portlet__body">
+    <div class="k-widget-9">
+      <div class="k-widget-9__panel">
+        <div class="k-widget-9__legends">
+          <div class="k-widget-9__legend">
+            <div class="k-widget-9__legend-bullet k-bg-brand"></div>
+            <div class="k-widget-9__legend-label">Week</div>
+          </div>
+          <div class="k-widget-9__legend">
+            <div class="k-widget-9__legend-bullet k-label-bg-color-1"></div>
+            <div class="k-widget-9__legend-label">Month</div>
+          </div>
+          <div class="k-widget-9__legend">
+            <div class="k-widget-9__legend-bullet k-label-bg-color-1"></div>
+            <div class="k-widget-9__legend-label">Year</div>
+          </div>
+        </div>
+        <div class="k-widget-9__toolbar">
+          <div class="dropdown dropdown-inline">
+            <button type="button" class="btn btn-default dropdown-toggle btn-font-sm btn-bold btn-upper" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              August
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+              <ul class="k-nav">
+                <li class="k-nav__section k-nav__section--first">
+                  <span class="k-nav__section-text">Export Tools</span>
+                </li>
+                <li class="k-nav__item">
+                  <a href="#" class="k-nav__link">
+                    <i class="k-nav__link-icon la la-print"></i>
+                    <span class="k-nav__link-text">Print</span>
+                  </a>
+                </li>
+                <li class="k-nav__item">
+                  <a href="#" class="k-nav__link">
+                    <i class="k-nav__link-icon la la-copy"></i>
+                    <span class="k-nav__link-text">Copy</span>
+                  </a>
+                </li>
+                <li class="k-nav__item">
+                  <a href="#" class="k-nav__link">
+                    <i class="k-nav__link-icon la la-file-excel-o"></i>
+                    <span class="k-nav__link-text">Excel</span>
+                  </a>
+                </li>
+                <li class="k-nav__item">
+                  <a href="#" class="k-nav__link">
+                    <i class="k-nav__link-icon la la-file-text-o"></i>
+                    <span class="k-nav__link-text">CSV</span>
+                  </a>
+                </li>
+                <li class="k-nav__item">
+                  <a href="#" class="k-nav__link">
+                    <i class="k-nav__link-icon la la-file-pdf-o"></i>
+                    <span class="k-nav__link-text">PDF</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="k-widget-9__chart">
+        <canvas id="k_chart_revenue_growth" height="300"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--end::Portlet-->

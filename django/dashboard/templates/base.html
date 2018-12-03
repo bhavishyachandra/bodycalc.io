@@ -43,13 +43,13 @@
           <div class='k-grid__item k-grid__item--fluid k-grid k-grid--hor k-wrapper' id='k_wrapper'>
 
               <header>
-                {% include 'dashboard/header/header.html' %}
+                {% include 'header/header.html' %}
                 {% block header %}
                 {% endblock %}
               </header>
 
               <aside>
-                {% include 'dashboard/aside.html' %}
+                {% include 'aside.html' %}
                 {% block aside %}
                 {% endblock %}
               </aside>
@@ -58,7 +58,7 @@
             {% block body %}
             {% endblock %}
 
-            {% include 'dashboard/footer.html' %}
+            {% include 'footer.html' %}
 
           </div>
         </div>

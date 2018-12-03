@@ -1,105 +1,46 @@
-{% extends 'dashboard/base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 
-{% block title %}BMI{% endblock %}
+{% block title %}Dashboard{% endblock %}
 
 {% block body %}
-
-
-<!-- begin:: Page -->
-
-<div class='k-grid__item k-grid__item--fluid k-grid k-grid--ver k-grid--stretch'>
-  <div class='k-content-wrapper k-content-wrapper--fixed  k-grid__item k-grid__item--fluid k-grid k-grid--ver'>
-
-    <!-- begin:: Content -->
-    <div class='k-content k-grid__item k-grid__item--fluid' id='k_content'>
-
-      <!--begin::Dashboard 1-->
-
-      <!--begin::Row-->
-      <div class='row'>
-        <div class='col-lg-6 col-xl-4 order-lg-1 order-xl-1'>
-
-          {% include 'dashboard/widgets/author-sales.html' %}
-
+  <!-- begin:: Page -->
+  <div class='k-grid__item k-grid__item--fluid k-grid k-grid--ver k-grid--stretch'>
+    <div class='k-content-wrapper k-content-wrapper--fixed  k-grid__item k-grid__item--fluid k-grid k-grid--ver'>
+      <!-- begin:: Content -->
+      <div class='k-content k-grid__item k-grid__item--fluid' id='k_content'>
+        <!--begin::Dashboard -->
+        <div class='row'>
+          <div class="col-lg-12 col-xl-8 order-lg-1 order-xl-1">
+            {% include 'dashboard/widgets/body-mass-index.html' %}
+          </div>
         </div>
-        <div class='col-lg-6 col-xl-4 order-lg-1 order-xl-1'>
-
-          {% include 'dashboard/widgets/technologies.html' %}
-
+        <div class='row'>
+          <div class='col-lg-12 col-xl-8 order-lg-1 order-xl-1'>
+            {% include 'dashboard/widgets/weight.html' %}
+          </div>
         </div>
-        <div class='col-lg-6 col-xl-4 order-lg-1 order-xl-1'>
 
-          {% include 'dashboard/widgets/total-orders.html' %}
-
+        <div class='row'>
+          <div class='col-lg-6 col-xl-4 order-lg-1 order-xl-1'>
+            {% include 'dashboard/widgets/calories.html' %}
+          </div>
+          <div class='col-lg-6 col-xl-4 order-lg-1 order-xl-1'>
+            {% include 'dashboard/widgets/macros.html' %}
+          </div>
         </div>
-        <div class='col-lg-6 col-xl-4 order-lg-1 order-xl-1'>
 
-          {% include 'dashboard/widgets/announcements.html' %}
-
+        <div class='row'>
+          <div class='col-lg-6 col-xl-4 order-lg-1 order-xl-1'>
+            {% include 'dashboard/widgets/top-foods.html' %}
+          </div>
         </div>
-        <div class='col-lg-6 col-xl-4 order-lg-1 order-xl-1'>
 
-          {% include 'dashboard/widgets/projects.html' %}
 
-        </div>
-        <div class='col-lg-6 col-xl-4 order-lg-1 order-xl-1'>
-
-          {% include 'dashboard/widgets/todays-schedule.html' %}
-
-        </div>
+        <!--end::Dashboard 1-->
       </div>
-
-      <!--end::Row-->
-
-      <!--begin::Row-->
-      <div class='row'>
-        <div class='col-lg-6 col-xl-4 order-lg-1 order-xl-1'>
-
-          {% include 'dashboard/widgets/top-products.html' %}
-
-        </div>
-        <div class='col-lg-12 col-xl-8 order-lg-2 order-xl-1'>
-
-          {% include 'dashboard/widgets/latest-tasks.html' %}
-
-        </div>
-        <div class='col-lg-6 col-xl-4 order-lg-1 order-xl-1'>
-
-          {% include 'dashboard/widgets/sales-statistics.html' %}
-
-        </div>
-        <div class='col-lg-12 col-xl-8 order-lg-2 order-xl-1'>
-
-          {% include 'dashboard/widgets/new-products.html' %}
-
-          {% include 'dashboard/widgets/new-authors.html' %}
-
-
-        </div>
-        <div class='col-lg-12 col-xl-4 order-lg-2 order-xl-1'>
-
-          {% include 'dashboard/widgets/latest-uploads.html' %}
-
-        </div>
-        <div class='col-lg-12 col-xl-8 order-lg-3 order-xl-1'>
-
-          {% include 'dashboard/widgets/recent-orders.html' %}
-
-        </div>
-      </div>
-
-      <!--end::Row-->
-
-      <!--end::Dashboard 1-->
+      <!-- end:: Content -->
     </div>
-
-    <!-- end:: Content -->
   </div>
-</div>
-
-<!-- end:: Page -->
-
-
-
+  <!-- end:: Page -->
 {% endblock %}

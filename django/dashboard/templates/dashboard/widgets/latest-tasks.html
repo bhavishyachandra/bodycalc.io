@@ -1,120 +1,334 @@
 {% load static %}
 
 <!--begin::Portlet-->
-<div class='k-portlet k-portlet--height-fluid'>
+<div class='k-portlet k-portlet--height-fluid k-portlet--tabs'>
   <div class='k-portlet__head'>
     <div class='k-portlet__head-label'>
-      <h3 class='k-portlet__head-title'>Sales Statistics</h3>
+      <h3 class='k-portlet__head-title'>
+        Latest Tasks
+      </h3>
     </div>
     <div class='k-portlet__head-toolbar'>
-      <div class='k-portlet__head-toolbar-wrapper'>
-        <div class='dropdown dropdown-inline'>
-          <button type='button' class='btn btn-clean btn-sm btn-icon btn-icon-md' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-            <i class='flaticon-more-1'></i>
-          </button>
-          <div class='dropdown-menu dropdown-menu-right'>
-            <ul class='k-nav'>
-              <li class='k-nav__section k-nav__section--first'>
-                <span class='k-nav__section-text'>Export Tools</span>
-              </li>
-              <li class='k-nav__item'>
-                <a href='#' class='k-nav__link'>
-                  <i class='k-nav__link-icon la la-print'></i>
-                  <span class='k-nav__link-text'>Print</span>
-                </a>
-              </li>
-              <li class='k-nav__item'>
-                <a href='#' class='k-nav__link'>
-                  <i class='k-nav__link-icon la la-copy'></i>
-                  <span class='k-nav__link-text'>Copy</span>
-                </a>
-              </li>
-              <li class='k-nav__item'>
-                <a href='#' class='k-nav__link'>
-                  <i class='k-nav__link-icon la la-file-excel-o'></i>
-                  <span class='k-nav__link-text'>Excel</span>
-                </a>
-              </li>
-              <li class='k-nav__item'>
-                <a href='#' class='k-nav__link'>
-                  <i class='k-nav__link-icon la la-file-text-o'></i>
-                  <span class='k-nav__link-text'>CSV</span>
-                </a>
-              </li>
-              <li class='k-nav__item'>
-                <a href='#' class='k-nav__link'>
-                  <i class='k-nav__link-icon la la-file-pdf-o'></i>
-                  <span class='k-nav__link-text'>PDF</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      <ul class='nav nav-tabs nav-tabs-line nav-tabs-line-brand nav-tabs-bold' role='tablist'>
+        <li class='nav-item'>
+          <a class='nav-link active show' data-toggle='tab' href='#k_portlet_tabs_1_1_content' role='tab' aria-selected='false'>
+            Today
+          </a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link' data-toggle='tab' href='#k_portlet_tabs_1_2_content' role='tab' aria-selected='false'>
+            Week
+          </a>
+        </li>
+        <li class='nav-item'>
+          <a class='nav-link' data-toggle='tab' href='#k_portlet_tabs_1_3_content' role='tab' aria-selected='true'>
+            Month
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
   <div class='k-portlet__body'>
-    <div class='k-widget-9'>
-      <div class='k-widget-9__panel'>
-        <div class='k-widget-9__legends'>
-          <div class='k-widget-9__legend'>
-            <div class='k-widget-9__legend-bullet k-bg-brand'></div>
-            <div class='k-widget-9__legend-label'>Author</div>
+    <div class='tab-content'>
+      <div class='tab-pane fade active show' id='k_portlet_tabs_1_1_content' role='tabpanel'>
+        <div class='k-widget-5'>
+          <div class='k-widget-5__item k-widget-5__item--info'>
+            <div class='k-widget-5__item-info'>
+              <a href='#' class='k-widget-5__item-title'>
+                Management meeting
+              </a>
+              <div class='k-widget-5__item-datetime'>
+                09:30 AM
+              </div>
+            </div>
+            <div class='k-widget-5__item-check'>
+              <label class='k-radio'>
+                <input type='radio' checked='checked' name='radio1'>
+                <span></span>
+              </label>
+            </div>
           </div>
-          <div class='k-widget-9__legend'>
-            <div class='k-widget-9__legend-bullet k-label-bg-color-1'></div>
-            <div class='k-widget-9__legend-label'>Customer</div>
+          <div class='k-widget-5__item k-widget-5__item--danger'>
+            <div class='k-widget-5__item-info'>
+              <a href='#' class='k-widget-5__item-title'>
+                Replace datatables rows color
+              </a>
+              <div class='k-widget-5__item-datetime'>
+                12:00 AM
+              </div>
+            </div>
+            <div class='k-widget-5__item-check'>
+              <label class='k-radio'>
+                <input type='radio' checked='checked' name='radio1'>
+                <span></span>
+              </label>
+            </div>
           </div>
-        </div>
-        <div class='k-widget-9__toolbar'>
-          <div class='dropdown dropdown-inline'>
-            <button type='button' class='btn btn-default dropdown-toggle btn-font-sm btn-bold btn-upper' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-              August
-            </button>
-            <div class='dropdown-menu dropdown-menu-right'>
-              <ul class='k-nav'>
-                <li class='k-nav__section k-nav__section--first'>
-                  <span class='k-nav__section-text'>Export Tools</span>
-                </li>
-                <li class='k-nav__item'>
-                  <a href='#' class='k-nav__link'>
-                    <i class='k-nav__link-icon la la-print'></i>
-                    <span class='k-nav__link-text'>Print</span>
-                  </a>
-                </li>
-                <li class='k-nav__item'>
-                  <a href='#' class='k-nav__link'>
-                    <i class='k-nav__link-icon la la-copy'></i>
-                    <span class='k-nav__link-text'>Copy</span>
-                  </a>
-                </li>
-                <li class='k-nav__item'>
-                  <a href='#' class='k-nav__link'>
-                    <i class='k-nav__link-icon la la-file-excel-o'></i>
-                    <span class='k-nav__link-text'>Excel</span>
-                  </a>
-                </li>
-                <li class='k-nav__item'>
-                  <a href='#' class='k-nav__link'>
-                    <i class='k-nav__link-icon la la-file-text-o'></i>
-                    <span class='k-nav__link-text'>CSV</span>
-                  </a>
-                </li>
-                <li class='k-nav__item'>
-                  <a href='#' class='k-nav__link'>
-                    <i class='k-nav__link-icon la la-file-pdf-o'></i>
-                    <span class='k-nav__link-text'>PDF</span>
-                  </a>
-                </li>
-              </ul>
+          <div class='k-widget-5__item k-widget-5__item--brand'>
+            <div class='k-widget-5__item-info'>
+              <a href='#' class='k-widget-5__item-title'>
+                Export Navitare booking table
+              </a>
+              <div class='k-widget-5__item-datetime'>
+                01:20 PM
+              </div>
+            </div>
+            <div class='k-widget-5__item-check'>
+              <label class='k-radio'>
+                <input type='radio' checked='checked' name='radio1'>
+                <span></span>
+              </label>
+            </div>
+          </div>
+          <div class='k-widget-5__item k-widget-5__item--success'>
+            <div class='k-widget-5__item-info'>
+              <a href='#' class='k-widget-5__item-title'>
+                NYCS internal discussion
+              </a>
+              <div class='k-widget-5__item-datetime'>
+                03: 00 PM
+              </div>
+            </div>
+            <div class='k-widget-5__item-check'>
+              <label class='k-radio'>
+                <input type='radio' checked='checked' name='radio1'>
+                <span></span>
+              </label>
+            </div>
+          </div>
+          <div class='k-widget-5__item k-widget-5__item--danger'>
+            <div class='k-widget-5__item-info'>
+              <a href='#' class='k-widget-5__item-title'>
+                Project Launch
+              </a>
+              <div class='k-widget-5__item-datetime'>
+                11: 00 AM
+              </div>
+            </div>
+            <div class='k-widget-5__item-check'>
+              <label class='k-radio'>
+                <input type='radio' checked='checked' name='radio1'>
+                <span></span>
+              </label>
+            </div>
+          </div>
+          <div class='k-widget-5__item k-widget-5__item--success'>
+            <div class='k-widget-5__item-info'>
+              <a href='#' class='k-widget-5__item-title'>
+                Server maintenance
+              </a>
+              <div class='k-widget-5__item-datetime'>
+                4: 30 PM
+              </div>
+            </div>
+            <div class='k-widget-5__item-check'>
+              <label class='k-radio'>
+                <input type='radio' checked='checked' name='radio1'>
+                <span></span>
+              </label>
             </div>
           </div>
         </div>
       </div>
-      <div class='k-widget-9__chart'>
-
-        <!--Doc: For the chart initialization refer to 'widgetSalesStatisticsChart' function in 'src\theme\app\scripts\custom\dashboard.js' -->
-        <canvas id='k_chart_sales_statistics' height='300'></canvas>
+      <div class='tab-pane fade' id='k_portlet_tabs_1_2_content' role='tabpanel'>
+        <div class='k-widget-5'>
+          <div class='k-widget-5__item k-widget-5__item--brand'>
+            <div class='k-widget-5__item-info'>
+              <a href='#' class='k-widget-5__item-title'>
+                Export Navitare booking table
+              </a>
+              <div class='k-widget-5__item-datetime'>
+                01:20 PM
+              </div>
+            </div>
+            <div class='k-widget-5__item-check'>
+              <label class='k-radio'>
+                <input type='radio' checked='checked' name='radio1'>
+                <span></span>
+              </label>
+            </div>
+          </div>
+          <div class='k-widget-5__item k-widget-5__item--danger'>
+            <div class='k-widget-5__item-info'>
+              <a href='#' class='k-widget-5__item-title'>
+                Replace datatables rows color
+              </a>
+              <div class='k-widget-5__item-datetime'>
+                12:00 AM
+              </div>
+            </div>
+            <div class='k-widget-5__item-check'>
+              <label class='k-radio'>
+                <input type='radio' checked='checked' name='radio1'>
+                <span></span>
+              </label>
+            </div>
+          </div>
+          <div class='k-widget-5__item k-widget-5__item--brand'>
+            <div class='k-widget-5__item-info'>
+              <a href='#' class='k-widget-5__item-title'>
+                Export Navitare booking table
+              </a>
+              <div class='k-widget-5__item-datetime'>
+                01:20 PM
+              </div>
+            </div>
+            <div class='k-widget-5__item-check'>
+              <label class='k-radio'>
+                <input type='radio' checked='checked' name='radio1'>
+                <span></span>
+              </label>
+            </div>
+          </div>
+          <div class='k-widget-5__item k-widget-5__item--danger'>
+            <div class='k-widget-5__item-info'>
+              <a href='#' class='k-widget-5__item-title'>
+                Replace datatables rows color
+              </a>
+              <div class='k-widget-5__item-datetime'>
+                12:00 AM
+              </div>
+            </div>
+            <div class='k-widget-5__item-check'>
+              <label class='k-radio'>
+                <input type='radio' checked='checked' name='radio1'>
+                <span></span>
+              </label>
+            </div>
+          </div>
+          <div class='k-widget-5__item k-widget-5__item--success'>
+            <div class='k-widget-5__item-info'>
+              <a href='#' class='k-widget-5__item-title'>
+                NYCS internal discussion
+              </a>
+              <div class='k-widget-5__item-datetime '>
+                03: 00 PM
+              </div>
+            </div>
+            <div class='k-widget-5__item-check '>
+              <label class='k-radio'>
+                <input type='radio' checked='checked' name='radio1'>
+                <span></span>
+              </label>
+            </div>
+          </div>
+          <div class='k-widget-5__item k-widget-5__item--info '>
+            <div class='k-widget-5__item-info '>
+              <a href='#' class='k-widget-5__item-title'>
+                Management meeting
+              </a>
+              <div class='k-widget-5__item-datetime '>
+                09:30 AM
+              </div>
+            </div>
+            <div class='k-widget-5__item-check '>
+              <label class='k-radio'>
+                <input type='radio' checked='checked' name='radio1'>
+                <span></span>
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='tab-pane fade ' id='k_portlet_tabs_1_3_content' role='tabpanel'>
+        <div class='k-widget-5 '>
+          <div class='k-widget-5__item k-widget-5__item--success'>
+            <div class='k-widget-5__item-info '>
+              <a href='#' class='k-widget-5__item-title'>
+                NYCS internal discussion
+              </a>
+              <div class='k-widget-5__item-datetime'>
+                03: 00 PM
+              </div>
+            </div>
+            <div class='k-widget-5__item-check'>
+              <label class='k-radio'>
+                <input type='radio' checked='checked' name='radio1'>
+                <span></span>
+              </label>
+            </div>
+          </div>
+          <div class='k-widget-5__item k-widget-5__item--danger'>
+            <div class='k-widget-5__item-info '>
+              <a href='#' class='k-widget-5__item-title'>
+                Replace datatables rows color
+              </a>
+              <div class='k-widget-5__item-datetime'>
+                12:00 AM
+              </div>
+            </div>
+            <div class='k-widget-5__item-check'>
+              <label class='k-radio'>
+                <input type='radio' checked='checked' name='radio1'>
+                <span></span>
+              </label>
+            </div>
+          </div>
+          <div class='k-widget-5__item k-widget-5__item--danger'>
+            <div class='k-widget-5__item-info'>
+              <a href='#' class='k-widget-5__item-title'>
+                Replace datatables rows color
+              </a>
+              <div class='k-widget-5__item-datetime'>
+                12:00 AM
+              </div>
+            </div>
+            <div class='k-widget-5__item-check'>
+              <label class='k-radio'>
+                <input type='radio' checked='checked' name='radio1'>
+                <span></span>
+              </label>
+            </div>
+          </div>
+          <div class='k-widget-5__item k-widget-5__item--brand'>
+            <div class='k-widget-5__item-info'>
+              <a href='#' class='k-widget-5__item-title'>
+                Export Navitare booking table
+              </a>
+              <div class='k-widget-5__item-datetime'>
+                01:20 PM
+              </div>
+            </div>
+            <div class='k-widget-5__item-check'>
+              <label class='k-radio'>
+                <input type='radio' checked='checked' name='radio1'>
+                <span></span>
+              </label>
+            </div>
+          </div>
+          <div class='k-widget-5__item k-widget-5__item--brand'>
+            <div class='k-widget-5__item-info '>
+              <a href='#' class='k-widget-5__item-title'>
+                Export Navitare booking table
+              </a>
+              <div class='k-widget-5__item-datetime '>
+                01:20 PM
+              </div>
+            </div>
+            <div class='k-widget-5__item-check'>
+              <label class='k-radio'>
+                <input type='radio' checked='checked' name='radio1'>
+                <span></span>
+              </label>
+            </div>
+          </div>
+          <div class='k-widget-5__item k-widget-5__item--info'>
+            <div class='k-widget-5__item-info '>
+              <a href='#' class='k-widget-5__item-title'>
+                Management meeting
+              </a>
+              <div class='k-widget-5__item-datetime'>
+                09:30 AM
+              </div>
+            </div>
+            <div class='k-widget-5__item-check'>
+              <label class='k-radio'>
+                <input type='radio' checked='checked' name='radio1'>
+                <span></span>
+              </label>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
