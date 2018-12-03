@@ -1,0 +1,21 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+
+{% block title %}Login{% endblock %}
+
+{% block body %}
+
+  <div class='k-grid k-grid--ver k-grid--root k-page'>
+    <div class='k-error404-v1'>
+      <div class='k-error404-v1__content'>
+        <div class='k-error404-v1__title'>404</div>
+        <div class='k-error404-v1__desc'><strong>OOPS!</strong> Something went wrong here.</div>
+      </div>
+      <div class='k-error404-v1__image'>
+        <img src='{% static 'assets/media/misc/404-bg1.jpg' %}' class='k-error404-v1__image-content' alt='' title=''/>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}

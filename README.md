@@ -1,6 +1,27 @@
 # bodycalc.io
 
-## Resources
+## Deployment shortcuts
+- Compile and run locally:
+```
+source .env3/bin/activate
+cd django
+python manage.py collectstatic
+python manage.py runserver
+```
+
+- Deploy to AWS Lambda:
+```
+source .env3/bin/activate
+cd django
+zappa update dev
+```
+- Sync static assets to AWS S3:
+```
+aws s3 sync static/ s3://bodycalc.io/static/
+```
+
+
+## Environment and Infrastructure Setup
 - API Gateway End points:
   - https://bodycalc.io
   - https://d29xo46q0sqnzl.cloudfront.net
@@ -10,6 +31,10 @@
 - Cloudfront:
   - https://cdn.bodycalc.io
   - https://d2aeb81h32shl0.cloudfront.net
+- Bootstrap UI Theme
+  - https://themes.getbootstrap.com/product/keen-the-ultimate-bootstrap-admin-theme/
+  - Docs: keen_v1.3.1/docs/docs.html
+
 
 ### Django Build
 - To do: https://bower.io/blog/2017/how-to-migrate-away-from-bower/
@@ -24,21 +49,14 @@ pip install -r requirements.txt
 python manage.py bower install
 ```
 
-### Django Dev
-```
-source .env3/bin/activate
-cd django
-python app/manage.py runserver  
-python app/manage.py collectstatic
-```
-
-### Sync static assets to AWS S3
-aws s3 sync static/ s3://bodycalc.io/static/
-
-### Zappa AWS deployment manager
+### Zappa AWS deployment manager setup
 - Note that Zappa relies an IAM user which is specified in django.zappa_settings.json. I placed a copy of the IAM policy in json format in aws-iam-policy.json.
-- Also note that i had to manually add the VPC settings to zappa_settings.json. I never figured out the individual policy permissions for this and so ended up temporarily adding admin rights to the project's IAM user.
-- Finally, for security reasons your RDS MySQL database should ideally use IAM access rather than traditionall username / pwd.
+- When I had to manually add the VPC settings to zappa_settings.json. I never figured out the individual policy permissions for this and so ended up temporarily adding admin rights to the project's IAM user.
+- Ensure that the RDS MySQL database uses IAM access rather than traditional username / pwd.
+
+* Manual deployment steps
+  * Enable CORS in AWS API Gateway. this is necessary for Fontawesome files.
+  * add VPC settings to zappa_settings.json
 
 ```
 zappa init         # see notes below on installation details
@@ -63,6 +81,6 @@ zappa -h
 
 ### settings.py
 - DATABASES: changed settings to AWS RDS MySQL. config settings are stored locally in mysite/.env
-- ALLOWED_HOSTS: added FQDN's for amazon.com and lawrencemcdaniel.com per suggestions in teh Django - Zappa Guide
+- ALLOWED_HOSTS: added FQDN's for amazon.com and lawrencemcdaniel.com per suggestions in the Django - Zappa Guide
 - SECRET_KEY: moved to locally-stored .env file
 - DEBUG:  moved to locally-stored .env file
