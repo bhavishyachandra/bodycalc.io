@@ -1,0 +1,35 @@
+{% load static %}
+
+<!--begin::Portlet-->
+<div class='k-portlet k-portlet--height-fluid'>
+  <div class='k-portlet__head k-portlet__head--lg k-portlet__head--noborder k-portlet__head--break-sm'>
+    <div class='k-portlet__head-label'>
+      <h3 class='k-portlet__head-title'>Recent Orders <small>32500 total</small></h3>
+    </div>
+    <div class='k-portlet__head-toolbar'>
+      <div class='k-portlet__head-wrapper k-form'>
+        <div class='k-form__group k-form__group--inline k-margin-r-10'>
+          <div class='k-form__label'>Sort By:</div>
+          <div class='k-form__control' style='width: 160px;'>
+            <select class='form-control bootstrap-select' id='k_form_status' title='Status'>
+              <option value='1'>Pending</option>
+              <option value='2'>Delivered</option>
+              <option value='3'>Canceled</option>
+              <option value='4'>Success</option>
+              <option value='5'>Info</option>
+              <option value='6'>Danger</option>
+            </select>
+          </div>
+        </div>
+        <a href='#' class='btn btn-brand btn-upper btn-bold'>New Record</a>
+      </div>
+    </div>
+  </div>
+  <div class='k-portlet__body k-portlet__body--fit'>
+
+    <!--Doc: For the datatable initialization refer to 'recentOrdersInit' function in 'src\theme\app\scripts\custom\dashboard.js' -->
+    <div class='k-datatable' id='k_recent_orders'></div>
+  </div>
+</div>
+
+<!--end::Portlet-->

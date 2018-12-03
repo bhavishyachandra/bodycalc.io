@@ -42,7 +42,18 @@
         <div class='k-grid__item k-grid__item--fluid k-grid k-grid--ver k-page'>
           <div class='k-grid__item k-grid__item--fluid k-grid k-grid--hor k-wrapper' id='k_wrapper'>
 
-            {% include 'dashboard/header.html' %}
+              <header>
+                {% include 'dashboard/header/header.html' %}
+                {% block header %}
+                {% endblock %}
+              </header>
+
+              <aside>
+                {% include 'dashboard/aside.html' %}
+                {% block aside %}
+                {% endblock %}
+              </aside>
+
 
             {% block body %}
             {% endblock %}

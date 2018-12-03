@@ -1,0 +1,90 @@
+{% load static %}
+
+<!--begin::Portlet-->
+<div class='k-portlet k-portlet--height-fluid'>
+  <div class='k-portlet__head  k-portlet__head--noborder'>
+    <div class='k-portlet__head-label'>
+      <h3 class='k-portlet__head-title'>Technologies</h3>
+    </div>
+    <div class='k-portlet__head-toolbar'>
+      <div class='k-portlet__head-toolbar-wrapper'>
+        <div class='dropdown dropdown-inline'>
+          <button type='button' class='btn btn-clean btn-sm btn-icon btn-icon-md' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+            <i class='flaticon-more-1'></i>
+          </button>
+          <div class='dropdown-menu dropdown-menu-right'>
+            <ul class='k-nav'>
+              <li class='k-nav__section k-nav__section--first'>
+                <span class='k-nav__section-text'>Export Tools</span>
+              </li>
+              <li class='k-nav__item'>
+                <a href='#' class='k-nav__link'>
+                  <i class='k-nav__link-icon la la-print'></i>
+                  <span class='k-nav__link-text'>Print</span>
+                </a>
+              </li>
+              <li class='k-nav__item'>
+                <a href='#' class='k-nav__link'>
+                  <i class='k-nav__link-icon la la-copy'></i>
+                  <span class='k-nav__link-text'>Copy</span>
+                </a>
+              </li>
+              <li class='k-nav__item'>
+                <a href='#' class='k-nav__link'>
+                  <i class='k-nav__link-icon la la-file-excel-o'></i>
+                  <span class='k-nav__link-text'>Excel</span>
+                </a>
+              </li>
+              <li class='k-nav__item'>
+                <a href='#' class='k-nav__link'>
+                  <i class='k-nav__link-icon la la-file-text-o'></i>
+                  <span class='k-nav__link-text'>CSV</span>
+                </a>
+              </li>
+              <li class='k-nav__item'>
+                <a href='#' class='k-nav__link'>
+                  <i class='k-nav__link-icon la la-file-pdf-o'></i>
+                  <span class='k-nav__link-text'>PDF</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='k-portlet__body k-portlet__body--fluid'>
+    <div class='k-widget-21'>
+      <div class='k-widget-21__title'>
+        <div class='k-widget-21__label'>9.3M</div>
+        <img src='{% static 'media/misc/iconbox_bg.png' %}' class='k-widget-21__bg' alt='bg' />
+      </div>
+      <div class='k-widget-21__data'>
+
+        <!--Doc: For the chart legend bullet colors can be changed with state helper classes: k-bg-success, k-bg-info, k-bg-danger. Refer: components/custom/colors.html -->
+        <div class='k-widget-21__legends'>
+          <div class='k-widget-21__legend'>
+            <i class='k-bg-brand'></i>
+            <span>HTML</span>
+          </div>
+          <div class='k-widget-21__legend'>
+            <i class='k-shape-bg-color-4'></i>
+            <span>CSS</span>
+          </div>
+          <div class='k-widget-21__legend'>
+            <i class='k-shape-bg-color-3'></i>
+            <span>Angular</span>
+          </div>
+        </div>
+        <div class='k-widget-21__chart'>
+          <div class='k-widget-21__stat'>+37%</div>
+
+          <!--Doc: For the chart initialization refer to 'widgetTechnologiesChart' function in 'src\theme\app\scripts\custom\dashboard.js' -->
+          <canvas id='k_widget_technologies_chart' style='height: 110px; width: 110px;'></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--end::Portlet-->
