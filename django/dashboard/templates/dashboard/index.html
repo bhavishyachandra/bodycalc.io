@@ -15,15 +15,10 @@
             {% include 'dashboard/widgets/body-mass-index.html' %}
           </div>
         </div>
-        <div class='row'>
-          <div class='col-lg-12 col-xl-8 order-lg-1 order-xl-1'>
-            {% include 'dashboard/widgets/weight.html' %}
-          </div>
-        </div>
 
         <div class='row'>
           <div class='col-lg-6 col-xl-4 order-lg-1 order-xl-1'>
-            {% include 'dashboard/widgets/calories.html' %}
+            {% include 'dashboard/widgets/weight.html' %}
           </div>
           <div class='col-lg-6 col-xl-4 order-lg-1 order-xl-1'>
             {% include 'dashboard/widgets/macros.html' %}
@@ -31,6 +26,9 @@
         </div>
 
         <div class='row'>
+          <div class='col-lg-6 col-xl-4 order-lg-1 order-xl-1'>
+            {% include 'dashboard/widgets/calories.html' %}
+          </div>
           <div class='col-lg-6 col-xl-4 order-lg-1 order-xl-1'>
             {% include 'dashboard/widgets/top-foods.html' %}
           </div>
